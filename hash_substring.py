@@ -6,9 +6,9 @@ def read_input():
         pattern = input().rstrip()
         text = input().rstrip()
     elif choice == 'F':
-            with open('./tests/06', 'r') as file:
-                pattern = file.readline().rstrip()
-                text = file.readline().rstrip()
+        with open('./tests/06', 'r') as file:
+            pattern = file.readline().rstrip()
+            text = file.readline().rstrip()
     return pattern, text
 
 def print_occurrences(output):
