@@ -1,7 +1,7 @@
 # python3
 
 def read_input():
-    choice = input().rstrip()
+    choice = input()
     if choice == 'I':
         pattern = input().rstrip()
         text = input().rstrip()
@@ -14,7 +14,6 @@ def read_input():
         except Exception as ex:
             print('File not found', str(ex))
             return
-    
     return pattern, text
 
 def print_occurrences(output):
