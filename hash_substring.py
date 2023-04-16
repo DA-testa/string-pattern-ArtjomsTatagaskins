@@ -6,14 +6,9 @@ def read_input():
         pattern = input().rstrip()
         text = input().rstrip()
     elif choice == 'F':
-        file_name = input()
-        try:
-            with open('./tests/' + file_name, 'r') as file:
+            with open('./tests/06', 'r') as file:
                 pattern = file.readline().rstrip()
                 text = file.readline().rstrip()
-        except Exception as ex:
-            print('File not found', str(ex))
-            return
     return pattern, text
 
 def print_occurrences(output):
