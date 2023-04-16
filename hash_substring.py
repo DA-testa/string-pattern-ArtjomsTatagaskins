@@ -1,19 +1,27 @@
 # python3
 
 def read_input():
-    choice = input().rstrip()
-    if choice == 'I':
-        pattern = input().rstrip()
-        text = input().rstrip()
-    elif choice == 'F':
-        file_name = input()
-        try:
-            with open('./tests/' + file_name, 'r') as file:
-                pattern = file.readline().rstrip()
-                text = file.readline().rstrip()
-        except Exception as ex:
-            print('File not found', str(ex))
+    try:
+        choice = input().rstrip()
+        if choice == 'I':
+            pattern = input().rstrip()
+            text = input().rstrip()
+        elif choice == 'F':
+            file_name = input()
+            try:
+                with open('./tests/' + file_name, 'r') as file:
+                    pattern = file.readline().rstrip()
+                    text = file.readline().rstrip()
+            except Exception as ex:
+                print('File not found', str(ex))
+                return
+        else:
+            print('Incorrect choice')
             return
+    except EOFError:
+        print('Input not provided')
+        return
+    
     
     return pattern, text
 
