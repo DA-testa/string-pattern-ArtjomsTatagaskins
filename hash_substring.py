@@ -1,7 +1,7 @@
 # python3
 
 def read_input():
-    choice = input()
+    choice = input().rstrip()
     if choice == 'I':
         pattern = input().rstrip()
         text = input().rstrip()
