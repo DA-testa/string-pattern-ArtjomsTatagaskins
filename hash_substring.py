@@ -14,13 +14,13 @@ def read_input():
                     text = file.readline().rstrip()
             except Exception as ex:
                 print('File not found', str(ex))
-                return
+                return None, None
         else:
             print('Incorrect choice')
-            return
+            return None, None
     except EOFError:
         print('Input not provided')
-        return
+        return None, None
     
     
     return pattern, text
